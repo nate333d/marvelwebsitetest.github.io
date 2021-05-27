@@ -1,0 +1,117 @@
+- HTML DOC
+
+<div class="wrap">
+    <div class="card">
+        <img src="comic2.jpg" alt="">
+
+        <div class="info">
+            <h1>HULK</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <a href="#" class="btn">SEE MORE</a>
+        </div>
+    </div>
+
+- CSS DOC
+
+.wrap {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+.card {
+    width: 300px;
+    height: 400px;
+    padding: 2rem 1rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgb(0, 0, 0, 0.5);
+    transition: .5s ease-in-out;
+    border-radius: 5%;
+
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(105, 0, 0, 0.5), rgb(194, 27, 27));
+    z-index: 2;
+    transition: .5s all;
+    opacity: 0;
+    border-radius: 5%;
+}
+.card:hover:before {
+    opacity: 1;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5%;
+}
+
+.card .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    transform: translateY(30px);
+    transition: .5s all;
+    opacity: 0;
+
+}
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+    opacity: 1;
+} 
+
+.card .info h1 {
+    margin: 0;
+    font-size: 18pt;
+    letter-spacing: 1px;
+   font-family: 'Big Shoulders Display', cursive;
+}
+
+.card .info p {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 24pt;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+ .card .info a {
+     text-decoration: none;
+     margin: 0.5rem 1rem;
+     background: #fff;
+     color: #000;
+     font-size: 14px;
+     font-weight: bold;
+     letter-spacing: 2px;
+    cursor: pointer;
+    transition: .4s ease-in-out;   
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+
+ }
+
+  .card .info a:hover {
+      transition: .5s all;
+      background: rgb(26, 17, 17);
+      color: #fff;
+  }
